@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wishlist</title>
+</head>
+<body>
+
+<h2>My Wishlist</h2>
+
+<ul id="wishlist"></ul>
+
+<script>
+    let products = [
+        {
+            name: "iPhone 15",
+            price: 60000
+        },
+        {
+            name: "Samsung Galaxy",
+            price: 40000
+        },
+        {
+            name: "Sony Headphones",
+            price: 5000
+        }
+    ];
+
+    localStorage.setItem("wishlist", JSON.stringify(products));
+
+    let savedWishlist = localStorage.getItem("wishlist");
+
+    let wishlist = JSON.parse(savedWishlist);
+
+    let list = document.getElementById("wishlist");
+
+    wishlist.forEach(function(product) {
+
+        let li = document.createElement("li");
+
+        li.innerHTML = product.name + " - ₹" + product.price;
+
+        list.appendChild(li);
+    });
+</script>
+
+</body>
+</html>

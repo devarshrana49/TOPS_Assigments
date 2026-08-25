@@ -1,0 +1,9 @@
+<button id="clearFavorites">Clear Favorites</button>
+document.getElementById("clearFavorites").addEventListener("click", function() {
+
+    localStorage.removeItem("restaurants");
+
+    restaurants = [];
+
+    displayRestaurants();
+});

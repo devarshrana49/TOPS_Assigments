@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Restaurants</title>
+</head>
+<body>
+
+<h2>My Favorite Zomato Restaurants</h2>
+
+<input type="text" id="restaurant" placeholder="Enter restaurant name">
+<button id="addRestaurant">Add Restaurant</button>
+
+<ul id="restaurantList"></ul>
+
+<script>
+    let restaurants = JSON.parse(localStorage.getItem("restaurants")) || [];
+
+    function displayRestaurants() {
+
+        let list = document.getElementById("restaurantList");
+
+        list.innerHTML = "";
+
+        restaurants.forEach(function(restaurant) {
+
+            let li = document.createElement("li");
+
+            li.innerHTML = restaurant;
+
+            list.appendChild(li);
+        });
+    }
+
+    document.getElementById("addRestaurant").addEventListener("click", function() {
+
+        let restaurant = document.getElementById("restaurant").value;
+
+        if (restaurant !== "") {
+
+            if (restaurants.length < 3) {
+
+                restaurants.push(restaurant);
+
+                localStorage.setItem(
+                    "restaurants",
+                    JSON.stringify(restaurants)
+                );
+
+                displayRestaurants();
+
+                document.getElementById("restaurant").value = "";
+
+            } else {
+                alert("You can add only 3 restaurants.");
+            }
+        }
+    });
+
+    displayRestaurants();
+</script>
+
+</body>
+</html>

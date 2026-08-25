@@ -1,0 +1,9 @@
+function getChannelNames(jsonString) {
+    let channels = JSON.parse(jsonString);
+
+    return channels;
+}
+
+let data = '["MrBeast", "CarryMinati", "Technical Guruji"]';
+
+console.log(getChannelNames(data));
