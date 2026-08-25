@@ -16,4 +16,15 @@ let playlists = [
     }
 ];
 
-console.log(playlists);
+playlists.push({
+    name: "Bollywood Favorites",
+    creator: "Devarsh",
+    numberOfSongs: 35,
+    genre: "Bollywood"
+});
+
+console.log("After push:", playlists);
+
+playlists.pop();
+
+console.log("After pop:", playlists);

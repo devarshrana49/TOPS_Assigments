@@ -1,0 +1,49 @@
+let orders = [
+    {
+        orderId: 101,
+        items: [
+            {
+                itemName: "Pizza",
+                price: 300
+            },
+            {
+                itemName: "Burger",
+                price: 150
+            }
+        ],
+        delivery: {
+            address: "Ahmedabad",
+            status: "Delivered"
+        }
+    },
+
+    {
+        orderId: 102,
+        items: [
+            {
+                itemName: "Biryani",
+                price: 250
+            },
+            {
+                itemName: "Cold Drink",
+                price: 50
+            }
+        ],
+        delivery: {
+            address: "Ahmedabad",
+            status: "Preparing"
+        }
+    }
+];
+
+for (let order of orders) {
+
+    let totalPrice = 0;
+
+    for (let item of order.items) {
+        totalPrice += item.price;
+    }
+
+    console.log("Order ID:", order.orderId);
+    console.log("Total Price: ₹" + totalPrice);
+}
