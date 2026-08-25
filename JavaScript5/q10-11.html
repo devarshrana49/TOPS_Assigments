@@ -1,0 +1,19 @@
+function showMenuItem(name, price) {
+    let div = document.createElement("div");
+
+    div.innerHTML = `
+        <h3>${name}</h3>
+        <p>Price: ₹${price}</p>
+    `;
+
+    div.style.border = "1px solid gray";
+    div.style.padding = "10px";
+    div.style.margin = "10px";
+    div.style.width = "250px";
+
+    return div;
+}
+
+document.body.appendChild(showMenuItem("Paneer Pizza", 299));
+document.body.appendChild(showMenuItem("Veg Burger", 149));
+document.body.appendChild(showMenuItem("Masala Dosa", 120));

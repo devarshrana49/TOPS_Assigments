@@ -1,0 +1,21 @@
+function createPlaylistButton(songName, themeColor) {
+    let button = document.createElement("button");
+
+    button.innerText = songName;
+    button.style.backgroundColor = themeColor;
+    button.style.color = "white";
+    button.style.padding = "10px 20px";
+    button.style.margin = "10px";
+    button.style.border = "none";
+    button.style.borderRadius = "5px";
+
+    return button;
+}
+
+let song1 = createPlaylistButton("Kesariya", "green");
+let song2 = createPlaylistButton("Believer", "blue");
+let song3 = createPlaylistButton("Perfect", "purple");
+
+document.body.appendChild(song1);
+document.body.appendChild(song2);
+document.body.appendChild(song3);

@@ -1,0 +1,8 @@
+const getDiscountedPrice = function(price, discountPercent) {
+    let discount = price * discountPercent / 100;
+    let finalPrice = price - discount;
+
+    return finalPrice;
+};
+
+console.log(getDiscountedPrice(1000, 20));
