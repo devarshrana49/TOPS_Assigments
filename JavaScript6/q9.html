@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode</title>
+</head>
+<body>
+
+<button id="darkMode">Dark Mode</button>
+
+<script>
+    document.getElementById("darkMode").addEventListener("click", function() {
+
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+
+        document.getElementById("darkMode").innerHTML = "Light Mode";
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Now Playing</title>
+</head>
+<body>
+
+<h2>Now Playing</h2>
+
+<span id="song-title">Kesariya</span>
+
+<br><br>
+
+<button id="changeSong">Change Song</button>
+
+<script>
+    let songs = [
+        "Kesariya",
+        "Believer",
+        "Perfect",
+        "Apna Bana Le"
+    ];
+
+    let index = 0;
+
+    document.getElementById("changeSong").addEventListener("click", function() {
+
+        index++;
+
+        if (index >= songs.length) {
+            index = 0;
+        }
+
+        document.getElementById("song-title").innerHTML = songs[index];
+
+    });
+</script>
+
+</body>
+</html>
