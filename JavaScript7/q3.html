@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Song</title>
+</head>
+<body>
+
+<button onclick="addSong()">Add Song</button>
+
+<div id="songCard"></div>
+
+<script>
+    function addSong() {
+
+        let songs = [
+            "Kesariya",
+            "Believer",
+            "Perfect",
+            "Apna Bana Le",
+            "Tum Hi Ho"
+        ];
+
+        let randomIndex = Math.floor(Math.random() * songs.length);
+        let randomSong = songs[randomIndex];
+
+        document.getElementById("songCard").innerHTML = `
+            <div style="border: 1px solid gray; padding: 15px; margin-top: 10px;">
+                🎵 ${randomSong}
+            </div>
+        `;
+    }
+</script>
+
+</body>
+</html>

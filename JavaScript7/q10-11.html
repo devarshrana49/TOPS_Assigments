@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+</head>
+<body>
+
+<h2>My Movies</h2>
+
+<div class="movie">
+    <span>Avengers</span>
+    <button class="remove">Remove</button>
+</div>
+
+<div class="movie">
+    <span>Inception</span>
+    <button class="remove">Remove</button>
+</div>
+
+<div class="movie">
+    <span>Interstellar</span>
+    <button class="remove">Remove</button>
+</div>
+
+<script>
+    let removeButtons = document.querySelectorAll(".remove");
+
+    removeButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            button.parentElement.remove();
+
+        });
+
+    });
+</script>
+
+</body>
+</html>

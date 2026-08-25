@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Like Button</title>
+</head>
+<body>
+
+<button id="likeButton">❤️ Like 0</button>
+
+<script>
+    let likes = 0;
+
+    document.getElementById("likeButton").addEventListener("click", function() {
+
+        likes++;
+
+        document.getElementById("likeButton").innerHTML =
+            "❤️ Like " + likes;
+    });
+</script>
+
+</body>
+</html>

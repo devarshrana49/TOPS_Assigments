@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Order</title>
+</head>
+<body>
+
+<h2>Food Order</h2>
+
+<select id="cuisine" onchange="showCuisine()">
+    <option value="">Select Cuisine</option>
+    <option value="Indian">Indian</option>
+    <option value="Chinese">Chinese</option>
+    <option value="Italian">Italian</option>
+    <option value="Mexican">Mexican</option>
+</select>
+
+<input type="number" placeholder="Quantity">
+
+<p id="message"></p>
+
+<script>
+    function showCuisine() {
+        let cuisine = document.getElementById("cuisine").value;
+
+        document.getElementById("message").innerHTML =
+            "You selected " + cuisine + " cuisine.";
+    }
+</script>
+
+</body>
+</html>
